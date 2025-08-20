@@ -44,54 +44,66 @@
             </div>
             <div>
                 <ul>
-                    <li class="w-full bg-black">
-                        <a href="" class="my-2 px-3 py-1 relative bg-white w-full rounded-md cursor-pointer hover:bg-slate-300 transition-all duration-200" onclick="showSection('dashbord')">
+                    <li class="my-2">
+                        <a href="#" class="w-full rounded-xl flex items-center px-4 py-2 hover:bg-slate-200 transition-all duration-200" onclick="showSection('dashbord')">
                             <i class="fa-solid fa-house"></i> <span class="text-xs xl:text-sm ml-3 font-semibold">ড্যাশবোর্ড</span>
                         </a> 
                     </li>
-                    <li class="my-2 px-3 py-1 rounded-md cursor-pointer hover:bg-slate-300 transition-all duration-200">
-                        <a href="">
+                    <li class="my-2">
+                        <a href="#" class="w-full rounded-xl flex items-center px-4 py-2 hover:bg-slate-200 transition-all duration-200" onclick="showSection('Academic')">
                             <i class="fa-solid fa-graduation-cap"></i> <span class="text-xs xl:text-sm ml-3 font-semibold">ক্লাস ৬-১০</span>
                         </a> 
                     </li>
-                    <!-- <li class="my-2 px-3 py-1 rounded-md cursor-pointer hover:bg-slate-300 transition-all duration-200">
-                        <a href="">
+                    <li class="my-2">
+                        <a href="#" class="w-full rounded-xl flex items-center px-4 py-2 hover:bg-slate-200 transition-all duration-200" onclick="showSection('exam')">
                             <i class="fa-solid fa-pen-to-square"></i> <span class="text-xs xl:text-sm ml-3 font-semibold">পরীক্ষা</span>
                         </a> 
-                    </li> -->
-                    <!-- <li class="my-2 px-3 py-1 rounded-md cursor-pointer hover:bg-slate-300 transition-all duration-200">
-                        <a href="">
+                    </li>
+                    <li class="my-2">
+                        <a href="#" class="w-full rounded-xl flex items-center px-4 py-2 hover:bg-slate-200 transition-all duration-200" onclick="showSection('practice')">
                             <i class="fa-solid fa-square-caret-right"></i> <span class="text-xs xl:text-sm ml-3 font-semibold">দ্রুত প্র্যাকটিস</span>
                         </a> 
                     </li>
-                    <li class="my-2 px-3 py-1 rounded-md cursor-pointer hover:bg-slate-300 transition-all duration-200">
-                        <a href="">
+                    <li class="my-2">
+                        <a href="#" class="w-full rounded-xl flex items-center px-4 py-2 hover:bg-slate-200 transition-all duration-200" onclick="showSection('community')">
                             <i class="fa-solid fa-users"></i> <span class="text-xs xl:text-sm ml-3 font-semibold">কমিউনিটি টিম</span>
                         </a> 
                     </li>
-                    <li class="my-2 px-3 py-1 rounded-md cursor-pointer hover:bg-slate-300 transition-all duration-200">
-                        <a href="">
+                    <li class="my-2">
+                        <a href="#" class="w-full rounded-xl flex items-center px-4 py-2 hover:bg-slate-200 transition-all duration-200" onclick="showSection('leaderboard')">
                             <i class="fa-solid fa-chart-area"></i> <span class="text-xs xl:text-sm ml-3 font-semibold">লিডারবোর্ড</span>
                         </a> 
                     </li>
-                    <li class="my-2 px-3 py-1 rounded-md cursor-pointer hover:bg-slate-300 transition-all duration-200">
-                        <a href="">
+                    <li class="my-2">
+                        <a href="#" class="w-full rounded-xl flex items-center px-4 py-2 hover:bg-slate-200 transition-all duration-200" onclick="showSection('profile')">
                             <i class="fa-solid fa-circle-user"></i> <span class="text-xs xl:text-sm ml-3 font-semibold">প্রোফাইল</span>
                         </a> 
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </nav>
     </nav>
     <main class="bg-slate-100 h-screen mt-15 lg:mt-0">
         <section id="dashbord" class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 userSection">
-            <div class="px-5 py-10">
-                <h1 class="font-bold mb-3">ড্যাশবোর্ড</h1>
-                <p class="h-[1px] w-full bg-black opacity-20"></p>
-            </div>
+           <?php include "dashboard.php" ?>
         </section>
-        <section id="Academic" class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 userSection">
+        <section id="Academic" class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 userSection hidden">
+           <?php include "academic.php" ?>
+        </section>
+        <section id="exam" class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 userSection hidden">
            <?php include "exam.php" ?>
+        </section>
+         <section id="practice" class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 userSection hidden">
+           <?php include "practice.php" ?>
+        </section>
+        <section id="community" class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 userSection hidden">
+           <?php include "community.php" ?>
+        </section>
+        <section id="leaderboard" class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 userSection hidden">
+           <?php include "leaderboard.php" ?>
+        </section>
+         <section id="profile" class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 userSection hidden">
+           <?php include "profile.php" ?>
         </section>
     </main>
     <script src="./../clickHandle.js"></script>
