@@ -151,7 +151,7 @@
         </nav>
     </nav>
     <main class="bg-slate-100 min-h-screen mt-10 lg:mt-0">
-        <div class="mx-auto lg:max-w-[75rem] lg:pl-65 transition-all duration-300 allsection">
+        <div class="mx-auto lg:max-w-[75rem] 2xl:max-w-full lg:pl-65 transition-all duration-300 allsection">
             <section id="dashbord" class="userSection">
                 <div class="px-5 py-10"> 
                     <h1 class="font-bold mb-3">ড্যাশবোর্ড</h1>
@@ -160,7 +160,7 @@
                         <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-700 mb-3 sm:mb-4 galada-regular">শিক্ষা, অনুপ্রেরণা ও সাফল্যের মঞ্চ!</h2>
                         <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-5 sm:mb-6 max-w-xl sm:max-w-2xl">প্রস্তুতি মঞ্চ-এ যোগ দিন, যেখানে শিক্ষার্থীরা একসাথে শিখে, অনুশীলন করে এবং নিজেদের দক্ষতা বাড়ায়। আপনার স্বপ্নের পথে এগিয়ে যেতে আজই আমাদের সাথে যুক্ত হোন।</p>
                         <a href="#" class="bg-gradient-to-r from-blue-600 to-red-500 hover:from-red-500 hover:to-blue-600 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full shadow-lg transition-all duration-300 text-base sm:text-lg" onclick="showSection('signUp')">এখনই সাইন আপ করুন</a>
-                        <div class="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-4 gap-5 sm:gap-6 w-full max-w-4xl">
+                        <div class="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-5 gap-5 sm:gap-6 w-full max-w-4xl 2xl:max-w-full">
                         
                             <div class="bg-white rounded-lg shadow-md p-5 sm:p-6 flex flex-col items-center">
                                 <i class="fa-solid fa-graduation-cap text-2xl sm:text-3xl text-red-500 mb-2 sm:mb-3"></i>
@@ -228,14 +228,16 @@
                 <div class="px-5 py-10"> 
                     <h1 class="font-bold mb-3">সাইন আপ</h1>
                     <p class="h-[1px] w-full bg-black opacity-20"></p>
-
+                    <?php include './users/signUp.php' ?>
                 </div>
             </section>
             <section id="login" class="userSection hidden">
                 <div class="px-5 py-10"> 
                     <h1 class="font-bold mb-3">সাইন ইন</h1>
                     <p class="h-[1px] w-full bg-black opacity-20"></p>
-                
+                    <div class="mx-auto flex justify-center items-center w-full sm:w-2/3 lg:w-1/2 py-20">
+                        <?php include './users/login.php' ?>
+                    </div>
                 </div>
             </section>
         </div>
